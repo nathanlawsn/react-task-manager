@@ -3,7 +3,7 @@ import {
   FaRoad,
 } from 'react-icons/fa';
 
-export const Header = () => {
+export const Header = ({ darkMode, setDarkMode }) => {
   return (
     <header className="header" data-testid="header">
       <nav>
@@ -14,7 +14,16 @@ export const Header = () => {
         <div className="settings">
           <ul>
             <li data-testid="quick-add-task-action" className="settings__add">+</li>
-            <li data-testid="dark-mode-action" className="settings__darkmode"><FaMoon /></li>
+            <li className="settings__darkmode">
+            <button
+                data-testid="dark-mode-action"
+                aria-label="Darkmode on/off"
+                type="button"
+                onClick={() => setDarkMode(!darkMode)}
+              >
+                <FaMoon />
+              </button>
+            </li>
           </ul>
         </div>
       </nav>

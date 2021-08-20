@@ -30,7 +30,7 @@ ul {
 // Variables
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
 $generic-border: 1px solid #f1f1f1;
-$generic-bg: #071456;
+$generic-bg: #f60;
 
 /* Mixins
   ============================================ */
@@ -89,6 +89,10 @@ $generic-bg: #071456;
   text-decoration: none !important;
   text-align: center;
   cursor: pointer;
+
+  .darkmode & {
+    background-color: #282828;
+  }
 }
 
 @mixin cancel() {
@@ -136,7 +140,13 @@ $generic-bg: #071456;
     -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
     background-color: #282828;
-    border-color: transparent;
+  }
+
+  .add-project,
+  .add-task {
+    &__plus {
+      color: #282828;
+    }
   }
 }
 
